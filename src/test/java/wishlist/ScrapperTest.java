@@ -2,12 +2,17 @@ package wishlist;
 
 import static org.junit.Assert.*;
 
+import org.jsoup.nodes.Element;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import service.Scrapper;
 
 public class ScrapperTest {
+
+	private static final Logger logger = LoggerFactory.getLogger(ScrapperTest.class);
 
 	@Before
 	public void setUp() throws Exception {
@@ -21,7 +26,7 @@ public class ScrapperTest {
 	@Test
 	public void weMapTest() {
 		Scrapper scrapper = new Scrapper();
-		scrapper.getChepest("키보드");
+		scrapper.getChepest("무접점 키보드");
 	}
 
 }
